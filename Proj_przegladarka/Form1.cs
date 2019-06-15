@@ -16,5 +16,24 @@ namespace Proj_przegladarka
         {
             InitializeComponent();
         }
+
+        private void wcisniecie(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedTab == tabdodaj)
+            {
+                Karty karta = new Karty();
+                TabPage page = new TabPage();
+                karta.Dock = DockStyle.Fill;
+
+                page.Controls.Add(karta);
+                tabControl1.Controls.Add(page);
+
+                tabControl1.TabPages.Remove(tabControl1.SelectedTab);
+                tabControl1.TabPages.Add(tabdodaj);
+
+                tabControl1.SelectedIndex = tabControl1.TabCount - 2;
+            }
+
+        }
     }
 }
