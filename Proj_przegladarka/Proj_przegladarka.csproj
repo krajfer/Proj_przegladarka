@@ -52,8 +52,20 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Karty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Karty.Designer.cs">
+      <DependentUpon>Karty.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Karty.resx">
+      <DependentUpon>Karty.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,6 +74,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -75,6 +88,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wstecz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wstecz1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wstecz11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\odswierz1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cofnij wstecz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cofnij wstecz1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opcje1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
