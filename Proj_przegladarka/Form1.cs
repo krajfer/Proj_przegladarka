@@ -7,11 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EasyTabs;
 
 namespace Proj_przegladarka
 {
     public partial class Form1 : Form
     {
+        protected TitleBarTabs ParentTabs
+        {
+            get
+            {
+                return (ParentForm as TitleBarTabs);
+            }
+        }
+
         public Form1()
         {
             InitializeComponent();
@@ -19,21 +28,53 @@ namespace Proj_przegladarka
 
         private void wcisniecie(object sender, EventArgs e)
         {
-            if (tabControl1.SelectedTab == tabdodaj)
+           
+            
+
+        }
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
+
+        private void zatwierdz(object sender, KeyEventArgs e)
+        {
+           
+              if (e.KeyCode == Keys.Enter)
+               {
+                    webBrowser1.Navigate(Adres.Text);
+              }
+            
+        }
+
+        private void wstecz_Click(object sender, EventArgs e)
+        {
+            webBrowser1.GoBack();
+        }
+
+        private void nastepna_Click(object sender, EventArgs e)
+        {
+            webBrowser1.GoForward();
+        }
+
+        private void odswierz_Click(object sender, EventArgs e)
+        {
+            if (!webBrowser1.Url.Equals("about:blank"))
             {
-                Karty karta = new Karty();
-                TabPage page = new TabPage();
-                karta.Dock = DockStyle.Fill;
-
-                page.Controls.Add(karta);
-                tabControl1.Controls.Add(page);
-
-                tabControl1.TabPages.Remove(tabControl1.SelectedTab);
-                tabControl1.TabPages.Add(tabdodaj);
-
-                tabControl1.SelectedIndex = tabControl1.TabCount - 2;
+                webBrowser1.Refresh();
             }
+        }
 
+        private void domowa_Click(object sender, EventArgs e)
+        {
+            webBrowser1.GoHome();
+        }
+
+        private void webBrowser1_Navigated(object sender, WebBrowserNavigatedEventArgs e)
+        {
+            Adres.Text = webBrowser1.Url.ToString();
+           
         }
     }
 }

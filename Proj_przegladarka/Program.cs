@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EasyTabs;
 
 namespace Proj_przegladarka
 {
@@ -16,7 +17,24 @@ namespace Proj_przegladarka
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            AppContanier contanier = new AppContanier();
+
+            contanier.Tabs.Add(
+                new TitleBarTab(contanier)
+                {
+                    Content = new Form1
+                    {
+                        Text = "Nowa Karta"
+                    }
+                });
+            //set initial tab first one
+            contanier.SelectedTabIndex = 0;
+
+            //Create tabs and start aplication
+            TitleBarTabsApplicationContext applicationContext = new TitleBarTabsApplicationContext();
+            applicationContext.Start(contanier);
+            Application.Run(applicationContext);
         }
     }
 }
