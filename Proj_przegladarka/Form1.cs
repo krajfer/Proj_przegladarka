@@ -28,8 +28,25 @@ namespace Proj_przegladarka
 
         private void wcisniecie(object sender, EventArgs e)
         {
+
+            if (String.IsNullOrEmpty(Adres.Text)) return;
+            if (Adres.Equals("about:blank")) return;
+            if (!Adres.Text.StartsWith("http://") &&
+                !Adres.Text.StartsWith("https://") )
+            {
+                Adres.Text = "http://" + Adres.Text;
+            }
            
-            
+            try
+            {
+                webBrowser1.Navigate(new Uri(Adres.Text));
+            }
+            catch (System.UriFormatException)
+            {
+                return;
+            }
+
+
 
         }
 

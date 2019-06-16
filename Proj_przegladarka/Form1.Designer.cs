@@ -101,7 +101,7 @@
             // 
             this.Adres.Location = new System.Drawing.Point(3, 12);
             this.Adres.Name = "Adres";
-            this.Adres.Size = new System.Drawing.Size(497, 20);
+            this.Adres.Size = new System.Drawing.Size(517, 20);
             this.Adres.TabIndex = 1;
             this.Adres.KeyDown += new System.Windows.Forms.KeyEventHandler(this.zatwierdz);
             // 

@@ -25,7 +25,7 @@ namespace Proj_przegladarka
                 {
                     Content = new Form1
                     {
-                        Text = "Nowa Karta"
+                        
                     }
                 });
             //set initial tab first one
