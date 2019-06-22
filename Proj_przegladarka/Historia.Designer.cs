@@ -35,12 +35,14 @@
             // 
             // bwyczysc
             // 
-            this.bwyczysc.Location = new System.Drawing.Point(12, 285);
+            this.bwyczysc.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.bwyczysc.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bwyczysc.Location = new System.Drawing.Point(13, 234);
             this.bwyczysc.Name = "bwyczysc";
-            this.bwyczysc.Size = new System.Drawing.Size(124, 23);
+            this.bwyczysc.Size = new System.Drawing.Size(185, 67);
             this.bwyczysc.TabIndex = 3;
-            this.bwyczysc.Text = "wyczysc";
-            this.bwyczysc.UseVisualStyleBackColor = true;
+            this.bwyczysc.Text = "Wyczyść Historie";
+            this.bwyczysc.UseVisualStyleBackColor = false;
             this.bwyczysc.Click += new System.EventHandler(this.bwyczysc_Click);
             // 
             // dataGridView1
@@ -61,6 +63,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(534, 326);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.bwyczysc);

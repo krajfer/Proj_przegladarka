@@ -58,12 +58,7 @@ namespace Proj_przegladarka
 
         public void zapisz()
         {
-            nowezzz no = new nowezzz();
-            no.Url = zmienna.strona;
-
-            SqlDataAcces.SaveHistory(no);
-
-          //  LoadhistoryList();
+          
 
         }
 

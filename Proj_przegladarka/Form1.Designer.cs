@@ -45,6 +45,7 @@
             this.odswierz = new System.Windows.Forms.Button();
             this.nastepna = new System.Windows.Forms.Button();
             this.wstecz = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -119,16 +120,17 @@
             // 
             // panel9
             // 
+            this.panel9.Controls.Add(this.label1);
             this.panel9.Controls.Add(this.Wyszukiwarka);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel9.Location = new System.Drawing.Point(627, 0);
+            this.panel9.Location = new System.Drawing.Point(541, 0);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(305, 43);
+            this.panel9.Size = new System.Drawing.Size(391, 43);
             this.panel9.TabIndex = 1;
             // 
             // Wyszukiwarka
             // 
-            this.Wyszukiwarka.Location = new System.Drawing.Point(4, 10);
+            this.Wyszukiwarka.Location = new System.Drawing.Point(90, 11);
             this.Wyszukiwarka.Name = "Wyszukiwarka";
             this.Wyszukiwarka.Size = new System.Drawing.Size(295, 20);
             this.Wyszukiwarka.TabIndex = 0;
@@ -222,6 +224,16 @@
             this.wstecz.UseVisualStyleBackColor = true;
             this.wstecz.Click += new System.EventHandler(this.wstecz_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(8, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Wyszukiwarka";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -265,6 +277,7 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.TextBox Wyszukiwarka;
         private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label1;
     }
 }
 
