@@ -12,7 +12,7 @@ namespace Proj_przegladarka
 {
     public class SqlDataAcces
     {
-        //metoda wypisania danych z bazy
+        /// metoda wypisania danych z bazy
         public static List<nowezzz> LoadHist()
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
@@ -22,7 +22,7 @@ namespace Proj_przegladarka
             }
         }
 
-        //metoda  zapisania danych do bazy
+        /// metoda  zapisania danych do bazy
         public static void SaveHistory(nowezzz hist)
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))

@@ -8,6 +8,9 @@ namespace Proj_przegladarka
 {
    public class nowezzz
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public int Id { get; set; }
         public string Url { get; set; }
     }

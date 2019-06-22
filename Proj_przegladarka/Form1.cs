@@ -16,9 +16,11 @@ namespace Proj_przegladarka
     public partial class Form1 : Form
     {
 
-       public String strona;
+       
 
-
+        /// <summary>
+        /// Funkcja z Pakietu EasyTabs słuzy do otwierania nowych kart
+        /// </summary>
         protected TitleBarTabs ParentTabs
         {
             get
@@ -36,42 +38,36 @@ namespace Proj_przegladarka
         {
 
         }
-        //po nacisnieciu enter w textbox adres przechodzi do wpisanej strony
+        /// <summary>
+        /// po nacisnieciu enter w textbox adres przechodzi do wpisanej strony 
+        /// </summary>
         public void zatwierdz(object sender, KeyEventArgs e)
         {
-            strona = sender.ToString();
-            Historia historia = new Historia();
+           
+         
 
             if (e.KeyCode == Keys.Enter)
                {
                     webBrowser1.Navigate(Adres.Text);
+              
+            }
             
 
-            }
-            if (e.KeyCode == Keys.Enter)
-            {
-                SQLiteConnection connection = new SQLiteConnection(@"Data Source=.\nowez.db;");
-                connection.Open();
-                SQLiteCommand cmd = new SQLiteCommand();
-                cmd.Connection = connection;
-                cmd.CommandText = "INSERT INTO Hist (Url) VALUES (@Url)";
-                cmd.Parameters.AddWithValue("@Url",Adres.Text);
-                cmd.ExecuteNonQuery();
+        } 
 
-            }
-
-        }
-        //cofa do poprzedniej strony
+        /// cofa do poprzedniej strony
         private void wstecz_Click(object sender, EventArgs e)
         {
             webBrowser1.GoBack();
         }
-        //przechodzi do nastepnej
+
+        /// przechodzi do nastepnej
         private void nastepna_Click(object sender, EventArgs e)
         {
             webBrowser1.GoForward();
         }
-        //odswierza strone
+
+        /// odswierza strone
         private void odswierz_Click(object sender, EventArgs e)
         {
             if (!webBrowser1.Url.Equals("about:blank"))
@@ -79,16 +75,27 @@ namespace Proj_przegladarka
                 webBrowser1.Refresh();
             }
         }
-        //przechodzi do strony domowej
+
+        ///przechodzi do strony domowej
         private void domowa_Click(object sender, EventArgs e)
         {
             webBrowser1.GoHome();
         }
-        
+        /// <summary>
+        /// przypisuje textboxowi wartosc aktualnej strony oraz zapisuje ją w Historii
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void webBrowser1_Navigated(object sender, WebBrowserNavigatedEventArgs e)
         {
             Adres.Text = webBrowser1.Url.ToString();
-           
+            SQLiteConnection connection = new SQLiteConnection(@"Data Source=.\nowez.db;");
+            connection.Open();
+            SQLiteCommand cmd = new SQLiteCommand();
+            cmd.Connection = connection;
+            cmd.CommandText = "INSERT INTO Hist (Url) VALUES (@Url)";
+            cmd.Parameters.AddWithValue("@Url", webBrowser1.Url.ToString());
+            cmd.ExecuteNonQuery();
         }
 
         private void Adres_TextChanged(object sender, EventArgs e)
@@ -96,7 +103,7 @@ namespace Proj_przegladarka
            
         }
 
-        //pokazuje formularz historii
+        /// pokazuje formularz historii
         private void button1_Click(object sender, EventArgs e)
         {
             Historia historia = new Historia();
@@ -112,20 +119,29 @@ namespace Proj_przegladarka
           
 
         }
-        //qwyszukuje w google tekst z textboxa wyszukaj
+        /// <summary>
+        /// wyszukuje w google tekst z textboxa wyszukaj 
+        /// </summary>
         private void Wyszukiwarka_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
                 webBrowser1.Navigate("http://google.com/search?q=" + Wyszukiwarka.Text);
-                SQLiteConnection connection = new SQLiteConnection(@"Data Source=.\nowez.db;");
-                connection.Open();
-                SQLiteCommand cmd = new SQLiteCommand();
-                cmd.Connection = connection;
-                cmd.CommandText = "INSERT INTO Hist (Url) VALUES (@Url)";
-                cmd.Parameters.AddWithValue("@Url", "http://google.com/search?q=" + Wyszukiwarka.Text);
-                cmd.ExecuteNonQuery();
+              
             }
+        }
+        /// <summary>
+        /// Zapisuje wybrana strone po kliknieciu przycisku
+        /// </summary>
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SQLiteConnection connection = new SQLiteConnection(@"Data Source=.\nowez.db;");
+            connection.Open();
+            SQLiteCommand cmd = new SQLiteCommand();
+            cmd.Connection = connection;
+            cmd.CommandText = "INSERT INTO Zapis (Url) VALUES (@Url)";
+            cmd.Parameters.AddWithValue("@Url", Adres.Text);
+            cmd.ExecuteNonQuery();
         }
     }
 }

@@ -16,29 +16,41 @@ namespace Proj_przegladarka
     public partial class Historia : Form
     {
 
-        List<nowezzz> historie = new List<nowezzz>();
-        Form1 zmienna = new Form1();
+       
+       
 
         public Historia()
         {
             InitializeComponent();
 
-            LoadhistoryList();
+         
         }
-
+        /// <summary>
+        /// Funkcja po wcisnieciu przycisku bwyczysc 
+        /// łączy się z bazą w celu usunięcia z niej zawartosci
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bwyczysc_Click(object sender, EventArgs e)
         {
+
             SQLiteConnection connection = new SQLiteConnection(@"Data Source=.\nowez.db;");
             connection.Open();
             SQLiteCommand cmd = new SQLiteCommand();
             cmd.Connection = connection;
             cmd.CommandText = "DELETE FROM Hist";
             cmd.ExecuteNonQuery();
-            LoadhistoryList();
+            
 
 
         }
+       
 
+        /// <summary>
+        /// Przy otwieraniu okna Historii Funkcja załadowuję aktualną historie z bazy danych
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Historia_Load(object sender, EventArgs e)
         {
             SQLiteConnection connection = new SQLiteConnection(@"Data Source=.\nowez.db;");
@@ -55,36 +67,22 @@ namespace Proj_przegladarka
                 dataGridView1.DataSource = Hist;
             }
         }
-
-        public void zapisz()
-        {
-          
-
-        }
-
-        public void LoadhistoryList()
-        {
-            //historie = SqlDataAcces.LoadHist();
-
-                WirdeUpHistoryList();
-        }
-
-        public void WirdeUpHistoryList()
-        {
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = historie;
-            dataGridView1.DataSource = "Url";
-        }
-
-
-        public void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            LoadhistoryList();
-        }
-
+        
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            LoadhistoryList();
+           
         }
+        /// <summary>
+        /// Wyswietla Formularz Zapisanych stron
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Zapisane_strony zapisane_Strony = new Zapisane_strony();
+            zapisane_Strony.Show();
+        }
+
+        
     }
 }
