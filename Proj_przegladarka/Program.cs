@@ -35,6 +35,8 @@ namespace Proj_przegladarka
             TitleBarTabsApplicationContext applicationContext = new TitleBarTabsApplicationContext();
             applicationContext.Start(contanier);
             Application.Run(applicationContext);
+
+           
         }
     }
 }
