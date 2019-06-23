@@ -43,16 +43,12 @@ namespace Proj_przegladarka
         /// </summary>
         public void zatwierdz(object sender, KeyEventArgs e)
         {
-           
-         
-
             if (e.KeyCode == Keys.Enter)
                {
                     webBrowser1.Navigate(Adres.Text);
               
             }
             
-
         } 
 
         /// cofa do poprzedniej strony
@@ -142,6 +138,30 @@ namespace Proj_przegladarka
             cmd.CommandText = "INSERT INTO Zapis (Url) VALUES (@Url)";
             cmd.Parameters.AddWithValue("@Url", Adres.Text);
             cmd.ExecuteNonQuery();
+        }
+        /// <summary>
+        /// zamyka okno przeglądarki
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
+
+       /// <summary>
+       /// zmienia kolor Paska zadań na wybrany przez użytkownika
+       /// </summary>
+       /// <param name="sender"></param>
+       /// <param name="e"></param>
+        private void zmieńKolorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ColorDialog color = new ColorDialog();
+            if (color.ShowDialog() == DialogResult.OK)
+            {
+               this.BackColor = color.Color;
+            }
         }
     }
 }

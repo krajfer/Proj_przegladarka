@@ -13,6 +13,11 @@ namespace Proj_przegladarka
             TabRenderer = new ChromeTabRenderer(this);
         }
 
+
+        /// <summary>
+        /// Tworzy nowe karty
+        /// </summary>
+        /// <returns></returns>
         public override TitleBarTab CreateTab()
         {
             return new TitleBarTab(this)

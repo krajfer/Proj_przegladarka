@@ -17,7 +17,11 @@ namespace Proj_przegladarka
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Wyswietla w datagrid zawartosc bazy
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Zapisane_strony_Load(object sender, EventArgs e)
         {
             SQLiteConnection connection = new SQLiteConnection(@"Data Source=.\nowez.db;");
@@ -34,7 +38,11 @@ namespace Proj_przegladarka
                 dataGridView1.DataSource = Zap;
             }
         }
-
+        /// <summary>
+        /// Usuwa z bazy wybrane elementy
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void bwyczysc_Click(object sender, EventArgs e)
         {
             int iwiersz = dataGridView1.CurrentCell.RowIndex;
@@ -47,5 +55,28 @@ namespace Proj_przegladarka
             cmd.ExecuteNonQuery();
             
         }
+
+        /// <summary>
+        /// zamyka okno przeglądarki
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
+
+        /// <summary>
+        /// zmienia kolor Paska zadań na wybrany przez użytkownika
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void zmieńKolorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
+
 }
