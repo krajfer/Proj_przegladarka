@@ -51,6 +51,7 @@
             this.nastepna = new System.Windows.Forms.Button();
             this.wstecz = new System.Windows.Forms.Button();
             this.zmieńKolorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.otwurzNoweOknoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -99,9 +100,10 @@
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem,
-            this.zmieńKolorToolStripMenuItem});
+            this.zmieńKolorToolStripMenuItem,
+            this.otwurzNoweOknoToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 92);
             // 
             // exitToolStripMenuItem
             // 
@@ -179,6 +181,7 @@
             // 
             // Adres
             // 
+            this.Adres.ContextMenuStrip = this.contextMenuStrip1;
             this.Adres.Location = new System.Drawing.Point(3, 11);
             this.Adres.Name = "Adres";
             this.Adres.Size = new System.Drawing.Size(517, 20);
@@ -276,6 +279,13 @@
             this.zmieńKolorToolStripMenuItem.Text = "zmień kolor";
             this.zmieńKolorToolStripMenuItem.Click += new System.EventHandler(this.zmieńKolorToolStripMenuItem_Click);
             // 
+            // otwurzNoweOknoToolStripMenuItem
+            // 
+            this.otwurzNoweOknoToolStripMenuItem.Name = "otwurzNoweOknoToolStripMenuItem";
+            this.otwurzNoweOknoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.otwurzNoweOknoToolStripMenuItem.Text = "Nowa Karta";
+            this.otwurzNoweOknoToolStripMenuItem.Click += new System.EventHandler(this.otwurzNoweOknoToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -326,6 +336,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem zmieńKolorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem otwurzNoweOknoToolStripMenuItem;
     }
 }
 

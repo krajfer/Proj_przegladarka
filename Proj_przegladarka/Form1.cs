@@ -163,5 +163,16 @@ namespace Proj_przegladarka
                this.BackColor = color.Color;
             }
         }
+        /// <summary>
+        /// Otwiera Nową karte
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void otwurzNoweOknoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.ParentTabs.AddNewTab();
+         
+        }
+        
     }
 }

@@ -56,27 +56,7 @@ namespace Proj_przegladarka
             
         }
 
-        /// <summary>
-        /// zamyka okno przeglądarki
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-
-        }
-
-        /// <summary>
-        /// zmienia kolor Paska zadań na wybrany przez użytkownika
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void zmieńKolorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
     }
 
 }
