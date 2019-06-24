@@ -125,10 +125,8 @@
     <Compile Include="Historia.Designer.cs">
       <DependentUpon>Historia.cs</DependentUpon>
     </Compile>
-    <Compile Include="nowezzz.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SqlDataAcces.cs" />
     <Compile Include="Zapisane strony.cs">
       <SubType>Form</SubType>
     </Compile>
