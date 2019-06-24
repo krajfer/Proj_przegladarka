@@ -151,7 +151,7 @@ namespace Proj_przegladarka
         }
 
        /// <summary>
-       /// zmienia kolor Paska zadań na wybrany przez użytkownika
+       /// zmienia kolor Paska zadań na wybrany przez użytkownika dla danej karty
        /// </summary>
        /// <param name="sender"></param>
        /// <param name="e"></param>
