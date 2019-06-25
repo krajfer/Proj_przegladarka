@@ -133,6 +133,23 @@
     <Compile Include="Zapisane strony.Designer.cs">
       <DependentUpon>Zapisane strony.cs</DependentUpon>
     </Compile>
+    <None Include="Dox\latex\annotated.tex" />
+    <None Include="Dox\latex\class_proj__przegladarka_1_1_app_contanier.eps" />
+    <None Include="Dox\latex\class_proj__przegladarka_1_1_app_contanier.tex" />
+    <None Include="Dox\latex\class_proj__przegladarka_1_1_form1.eps" />
+    <None Include="Dox\latex\class_proj__przegladarka_1_1_form1.tex" />
+    <None Include="Dox\latex\class_proj__przegladarka_1_1_historia.eps" />
+    <None Include="Dox\latex\class_proj__przegladarka_1_1_historia.tex" />
+    <None Include="Dox\latex\class_proj__przegladarka_1_1_program.tex" />
+    <None Include="Dox\latex\class_proj__przegladarka_1_1_zapisane__strony.eps" />
+    <None Include="Dox\latex\class_proj__przegladarka_1_1_zapisane__strony.tex" />
+    <None Include="Dox\latex\doxygen.sty" />
+    <None Include="Dox\latex\hierarchy.tex" />
+    <None Include="Dox\latex\make.bat" />
+    <None Include="Dox\latex\Makefile" />
+    <None Include="Dox\latex\namespaces.tex" />
+    <None Include="Dox\latex\namespace_proj__przegladarka.tex" />
+    <None Include="Dox\latex\refman.tex" />
     <None Include="Resources\zzzz.png" />
     <EmbeddedResource Include="AppContanier.resx">
       <DependentUpon>AppContanier.cs</DependentUpon>
@@ -153,6 +170,138 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Content Include="Dox\html\annotated.html" />
+    <Content Include="Dox\html\bc_s.png" />
+    <Content Include="Dox\html\bdwn.png" />
+    <Content Include="Dox\html\classes.html" />
+    <Content Include="Dox\html\class_proj__przegladarka_1_1_app_contanier-members.html" />
+    <Content Include="Dox\html\class_proj__przegladarka_1_1_app_contanier.html" />
+    <Content Include="Dox\html\class_proj__przegladarka_1_1_app_contanier.png" />
+    <Content Include="Dox\html\class_proj__przegladarka_1_1_form1-members.html" />
+    <Content Include="Dox\html\class_proj__przegladarka_1_1_form1.html" />
+    <Content Include="Dox\html\class_proj__przegladarka_1_1_form1.png" />
+    <Content Include="Dox\html\class_proj__przegladarka_1_1_historia-members.html" />
+    <Content Include="Dox\html\class_proj__przegladarka_1_1_historia.html" />
+    <Content Include="Dox\html\class_proj__przegladarka_1_1_historia.png" />
+    <Content Include="Dox\html\class_proj__przegladarka_1_1_program-members.html" />
+    <Content Include="Dox\html\class_proj__przegladarka_1_1_program.html" />
+    <Content Include="Dox\html\class_proj__przegladarka_1_1_zapisane__strony-members.html" />
+    <Content Include="Dox\html\class_proj__przegladarka_1_1_zapisane__strony.html" />
+    <Content Include="Dox\html\class_proj__przegladarka_1_1_zapisane__strony.png" />
+    <Content Include="Dox\html\closed.png" />
+    <Content Include="Dox\html\dir_0d87d412100404bee5d6e44e2a6d3d02.html" />
+    <Content Include="Dox\html\dir_10eb10f7c3e288ff10fb0dd640b5041d.html" />
+    <Content Include="Dox\html\dir_270e76bd91c332795873ac85f53b577f.html" />
+    <Content Include="Dox\html\dir_8ceffd4ee35c3518d4e8bdc7e638efe8.html" />
+    <Content Include="Dox\html\dir_a4236ba5e62f802fee3892c373809690.html" />
+    <Content Include="Dox\html\dir_b4e3ac9f1e2059fb80bdd9763e64ead5.html" />
+    <Content Include="Dox\html\dir_e6bb53534ac0e427887cf7a94c0c004e.html" />
+    <Content Include="Dox\html\doc.png" />
+    <Content Include="Dox\html\doxygen.css" />
+    <Content Include="Dox\html\doxygen.png" />
+    <Content Include="Dox\html\dynsections.js" />
+    <Content Include="Dox\html\folderclosed.png" />
+    <Content Include="Dox\html\folderopen.png" />
+    <Content Include="Dox\html\functions.html" />
+    <Content Include="Dox\html\functions_func.html" />
+    <Content Include="Dox\html\functions_prop.html" />
+    <Content Include="Dox\html\functions_vars.html" />
+    <Content Include="Dox\html\hierarchy.html" />
+    <Content Include="Dox\html\index.html" />
+    <Content Include="Dox\html\jquery.js" />
+    <Content Include="Dox\html\menu.js" />
+    <Content Include="Dox\html\menudata.js" />
+    <Content Include="Dox\html\namespaces.html" />
+    <Content Include="Dox\html\namespace_proj__przegladarka.html" />
+    <Content Include="Dox\html\nav_f.png" />
+    <Content Include="Dox\html\nav_g.png" />
+    <Content Include="Dox\html\nav_h.png" />
+    <Content Include="Dox\html\opcje.png" />
+    <Content Include="Dox\html\open.png" />
+    <Content Include="Dox\html\search\all_0.html" />
+    <Content Include="Dox\html\search\all_0.js" />
+    <Content Include="Dox\html\search\all_1.html" />
+    <Content Include="Dox\html\search\all_1.js" />
+    <Content Include="Dox\html\search\all_2.html" />
+    <Content Include="Dox\html\search\all_2.js" />
+    <Content Include="Dox\html\search\all_3.html" />
+    <Content Include="Dox\html\search\all_3.js" />
+    <Content Include="Dox\html\search\all_4.html" />
+    <Content Include="Dox\html\search\all_4.js" />
+    <Content Include="Dox\html\search\all_5.html" />
+    <Content Include="Dox\html\search\all_5.js" />
+    <Content Include="Dox\html\search\all_6.html" />
+    <Content Include="Dox\html\search\all_6.js" />
+    <Content Include="Dox\html\search\all_7.html" />
+    <Content Include="Dox\html\search\all_7.js" />
+    <Content Include="Dox\html\search\all_8.html" />
+    <Content Include="Dox\html\search\all_8.js" />
+    <Content Include="Dox\html\search\all_9.html" />
+    <Content Include="Dox\html\search\all_9.js" />
+    <Content Include="Dox\html\search\all_a.html" />
+    <Content Include="Dox\html\search\all_a.js" />
+    <Content Include="Dox\html\search\all_b.html" />
+    <Content Include="Dox\html\search\all_b.js" />
+    <Content Include="Dox\html\search\all_c.html" />
+    <Content Include="Dox\html\search\all_c.js" />
+    <Content Include="Dox\html\search\all_d.html" />
+    <Content Include="Dox\html\search\all_d.js" />
+    <Content Include="Dox\html\search\classes_0.html" />
+    <Content Include="Dox\html\search\classes_0.js" />
+    <Content Include="Dox\html\search\classes_1.html" />
+    <Content Include="Dox\html\search\classes_1.js" />
+    <Content Include="Dox\html\search\classes_2.html" />
+    <Content Include="Dox\html\search\classes_2.js" />
+    <Content Include="Dox\html\search\classes_3.html" />
+    <Content Include="Dox\html\search\classes_3.js" />
+    <Content Include="Dox\html\search\classes_4.html" />
+    <Content Include="Dox\html\search\classes_4.js" />
+    <Content Include="Dox\html\search\close.png" />
+    <Content Include="Dox\html\search\functions_0.html" />
+    <Content Include="Dox\html\search\functions_0.js" />
+    <Content Include="Dox\html\search\functions_1.html" />
+    <Content Include="Dox\html\search\functions_1.js" />
+    <Content Include="Dox\html\search\functions_2.html" />
+    <Content Include="Dox\html\search\functions_2.js" />
+    <Content Include="Dox\html\search\functions_3.html" />
+    <Content Include="Dox\html\search\functions_3.js" />
+    <Content Include="Dox\html\search\functions_4.html" />
+    <Content Include="Dox\html\search\functions_4.js" />
+    <Content Include="Dox\html\search\functions_5.html" />
+    <Content Include="Dox\html\search\functions_5.js" />
+    <Content Include="Dox\html\search\functions_6.html" />
+    <Content Include="Dox\html\search\functions_6.js" />
+    <Content Include="Dox\html\search\functions_7.html" />
+    <Content Include="Dox\html\search\functions_7.js" />
+    <Content Include="Dox\html\search\functions_8.html" />
+    <Content Include="Dox\html\search\functions_8.js" />
+    <Content Include="Dox\html\search\functions_9.html" />
+    <Content Include="Dox\html\search\functions_9.js" />
+    <Content Include="Dox\html\search\functions_a.html" />
+    <Content Include="Dox\html\search\functions_a.js" />
+    <Content Include="Dox\html\search\mag_sel.png" />
+    <Content Include="Dox\html\search\namespaces_0.html" />
+    <Content Include="Dox\html\search\namespaces_0.js" />
+    <Content Include="Dox\html\search\nomatches.html" />
+    <Content Include="Dox\html\search\properties_0.html" />
+    <Content Include="Dox\html\search\properties_0.js" />
+    <Content Include="Dox\html\search\search.css" />
+    <Content Include="Dox\html\search\search.js" />
+    <Content Include="Dox\html\search\searchdata.js" />
+    <Content Include="Dox\html\search\search_l.png" />
+    <Content Include="Dox\html\search\search_m.png" />
+    <Content Include="Dox\html\search\search_r.png" />
+    <Content Include="Dox\html\search\variables_0.html" />
+    <Content Include="Dox\html\search\variables_0.js" />
+    <Content Include="Dox\html\splitbar.png" />
+    <Content Include="Dox\html\sync_off.png" />
+    <Content Include="Dox\html\sync_on.png" />
+    <Content Include="Dox\html\tabs.css" />
+    <Content Include="Dox\html\tab_a.png" />
+    <Content Include="Dox\html\tab_b.png" />
+    <Content Include="Dox\html\tab_h.png" />
+    <Content Include="Dox\html\tab_s.png" />
+    <Content Include="Dox\latex\opcje.png" />
     <Content Include="nowez.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -211,6 +360,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dox\Run\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.111.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.111.0\build\net46\System.Data.SQLite.Core.targets')" />
